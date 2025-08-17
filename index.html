@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wireless Leads Tracker v4.2</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📱 Wireless Sales Leads</h1>
+    <button id="themeToggle">Light/Dark</button>
+    <button id="collapseToggle">Collapse Top</button>
+    <button id="summaryBtn">📊 Daily Summary</button>
+    <button id="metricsBtn">📈 Supervisor Metrics</button>
+    <button id="assistantBtn">🤖 Assistant</button>
+  </header>
+
+  <section id="topSection">
+    <input id="leadName" placeholder="Lead name">
+    <input id="leadPhone" placeholder="Phone">
+    <input id="leadEmail" placeholder="Email">
+    <input id="leadDate" type="date">
+    <select id="leadStage">
+      <option>New</option>
+      <option>Qualified</option>
+      <option>Proposal</option>
+      <option>Negotiation</option>
+      <option>Closed Won</option>
+      <option>Closed Lost</option>
+    </select>
+    <input id="leadFollowUp" type="date">
+    <textarea id="leadNotes" placeholder="Notes"></textarea>
+    <button id="addLead">➕ Add Lead</button>
+  </section>
+
+  <main>
+    <table id="leadsTable">
+      <thead>
+        <tr>
+          <th>Name</th><th>Phone</th><th>Email</th>
+          <th>Date</th><th>Stage</th><th>Follow-up</th><th>Notes</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <div id="modal" class="modal hidden"><div id="modalContent"></div></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
